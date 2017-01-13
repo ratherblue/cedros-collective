@@ -10,7 +10,7 @@ const config = {
   },
   output: {
     filename: 'bundle.js',
-    path: './dist'
+    path: './docs'
   },
   module: {
     loaders: [

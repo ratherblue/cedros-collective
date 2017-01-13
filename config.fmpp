@@ -3,7 +3,7 @@ sourceEncoding: UTF-8
 outputEncoding: UTF-8
 urlEscapingCharset: UTF-8
 sourceRoot: src
-outputRoot: dist
+outputRoot: docs
 logFile: log.fmpp
 datetimeFormat: "MMMM d, yyyy h:mm a zzz"
 caseSensitive
