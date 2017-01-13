@@ -1,0 +1,20 @@
+# encoding: UTF-8
+sourceEncoding: UTF-8
+outputEncoding: UTF-8
+urlEscapingCharset: UTF-8
+sourceRoot: src
+outputRoot: dist
+logFile: log.fmpp
+datetimeFormat: "MMMM d, yyyy h:mm a zzz"
+caseSensitive
+borders: [
+  header("<#import '/templates/common.ftl' as c />", **/*.html, /portfolio/*.ftl)
+  header("<#import '/templates/common.ftl' as c />", sitemap.xml)
+]
+modes: [
+  ignore(/templates/, /less/, *.js)
+]
+data: {
+  domain: cedroscollective.com
+  googleUA: UA-42813118-1
+}
