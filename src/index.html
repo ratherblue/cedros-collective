@@ -1,6 +1,41 @@
 <#ftl strip_text=true />
 
 <@page.page bodyClass="homepage" title="Welcome" sitemap={ "priority": "0.8", "changefreq": "yearly" }>
-
-  <p class="lead">Hello.</p>
+  <#compress>
+    <@ui.pageTitle>
+      Cedros Collective<#t />
+      <div class="sub-title">Coming Soon.</div><#t />
+    </@ui.pageTitle>
+    <@sections />
+  </#compress>
 </@page.page>
+
+
+<#macro sections>
+  <#compress>
+    <ul class="three">
+      <@section title="Address">
+        <address class="address">
+          435 South Cedros Avenue<br>
+          Solana Beach, CA 92075
+        </address>
+      </@section>
+      <@section title="Media">
+        Floor Plans<br>
+        Renderings
+      </@section>
+      <@section title="Contact"></@section>
+    </ul>
+  </#compress>
+</#macro>
+
+<#macro section title>
+  <#compress>
+    <li class="column">
+      <strong class="column-title">${title}</strong>
+      <div class="column-content">
+        <#nested />
+      </div>
+    </li>
+  </#compress>
+</#macro>

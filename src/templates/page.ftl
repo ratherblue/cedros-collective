@@ -51,16 +51,11 @@
       <@charset />
       <title>${title?xhtml + titleSuffix}</title>
       <@defaultMetaTags />
+      <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
       <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
     <body<#if bodyClass?has_content> class="${bodyClass}"</#if> itemscope itemtype="${itemtype}">
       <meta itemprop="dateModified" content="${pp.now?iso("America/Los_Angeles")}">
-      <div class="toolbar-wrapper">
-        <header class="toolbar page-width">
-          <a class="logo" href="${pp.pathTo("/index.html")}" role="banner"></a>
-          <@pageNav activeTab=activeTab />
-        </header>
-      </div>
       <main class="page-width page-main" role="main">
         <#if (activeTab != "home" && title != "Welcome")>
           <@ui.breadcrumb crumbs=[{

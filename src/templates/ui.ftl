@@ -29,33 +29,6 @@
 
 
 <#---
-  Page section
-  @param id
-  @param title
-  @param class
--->
-<#macro portfolioSection id title class="">
-  <section id="${id}" class="${("portfolio-section " + class)?trim}">
-    <h1 class="section-header">${title}</h1>
-    <#nested />
-  </section>
-</#macro>
-
-<#---
-  Page section
-  @param id
-  @param title
-  @param class
--->
-<#macro resumeSection id title class="">
-  <section id="${id}" class="${("resume-section " + class)?trim}">
-    <h1 class="section-header">${title}</h1>
-    <#nested />
-  </section>
-</#macro>
-
-
-<#---
   @param class
   @param attrs
 -->
