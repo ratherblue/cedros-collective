@@ -30,8 +30,9 @@
 
 .white-space {
   flex: 1 1 20%;
-  @media (min-width: @screen-sm-min) {
 
+  @media (min-width: @screen-md-min) {
+    min-height: 48px;
   }
 }
 
@@ -39,17 +40,20 @@
   font-weight: 300;
   font-size: 36px;
   margin: 0;
+  color: #232c3a;
+  text-shadow: 1px 1px rgba(255, 255, 255, 0.2);
 
   @media (min-width: @screen-md-min) {
     font-size: 45px;
   }
 
   @media (min-width: @screen-lg-min) {
-    font-size: 60px;
+    font-size: 72px;
   }
 
   .sub-title {
     font-size: 15px;
+    font-style: italic;
   }
 }
 
@@ -60,16 +64,22 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  color: #9a8673;
 
   @media (min-width: @screen-md-min) {
     flex-direction: row;
     margin-top: @gutter-width * 2;
   }
 
+  a {
+    color: #93e22d;
+  }
+
   .column {
     flex: 1 1 0px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(30, 30, 30, .8);
     margin-bottom: @gutter-width/2;
+    text-shadow: 1px 1px rgba(4, 3, 3, 1);
 
     @media (min-width: @screen-md-min) {
       margin-bottom: 0;
@@ -89,7 +99,7 @@
     padding: 9px 12px;
 
     @media (min-width: @screen-md-min) {
-      padding: 15px;
+      padding: 9px 15px;
     }
   }
 
@@ -102,21 +112,63 @@
   }
 }
 
+.image-list {
+  margin-bottom: @gutter-width/2;
+
+  a {
+    display: inline-flex;
+    align-items: baseline;
+  }
+}
+
 .address {
   font-style: normal;
+  margin-left: @gutter-width;
 }
 
 .google-maps-link {
   font-size: 12px;
   display: block;
   margin-top: 5px;
+  margin-left: @gutter-width;
+}
+
+.leasing-agents {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+  > li:first-child {
+    margin-bottom: @gutter-width/2;
+  }
+
+  .contact-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 0 0 @gutter-width;
+  }
+
+  .phone-link {
+
+  }
 }
 
 .copyright-assets {
   font-size: 14px;
 }
 
+.footer-wrapper {
+  margin-top: @gutter-width;
+  background-color: rgba(30, 30, 30, .8);
+}
+
 .footer {
-  padding-top: @gutter-width;
-  padding-bottom: @gutter-width;
+  padding-top: @gutter-width/3;
+  padding-bottom: @gutter-width/2;
+  text-shadow: 1px 1px rgba(4, 3, 3, 1);
+  color: #9a8673;
+
+  a {
+    color: #93e22d;
+  }
 }

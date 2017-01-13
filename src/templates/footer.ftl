@@ -5,10 +5,12 @@
 
 <#macro wrapper>
   <#compress>
-    <div class="page-width">
-      <footer class="footer" role="contentinfo">
-        <#nested />
-      </footer>
+    <div class="footer-wrapper">
+      <div class="page-width">
+        <footer class="footer" role="contentinfo">
+          <#nested />
+        </footer>
+      </div>
     </div>
   </#compress>
 </#macro>

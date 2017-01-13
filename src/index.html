@@ -4,7 +4,7 @@
   <#compress>
     <@ui.pageTitle>
       Cedros Collective<#t />
-      <div class="sub-title">Coming Soon.</div><#t />
+      <div class="sub-title">Coming Soon</div><#t />
     </@ui.pageTitle>
     <@sections />
   </#compress>
@@ -14,14 +14,21 @@
 <#macro sections>
   <#compress>
     <ul class="columns">
-      <@section title="Address" icon="icon-address">
+      <@section title="About Cedros Collective" icon="icon-info">
+        <strong class="icon-images">Images</strong>
+        <ul class="image-list">
+          <li><a class="icon-image" href="img/front.jpg">Digital Rendering — Front</a></li>
+          <li><a class="icon-image" href="img/rear.jpg">Digital Rendering — Rear</a></li>
+          <li><a class="icon-pdf" href="pdf/floor-plans.pdf">Floor Plans</a></li>
+        </ul>
+
+        <strong class="icon-address">Address</strong>
         <address class="address">
           435 South Cedros Avenue<br>
           Solana Beach, CA 92075
         </address>
-        <a class="google-maps-link" href="https://www.google.com/maps/place/435+S+Cedros+Ave,+Solana+Beach,+CA+92075">View on Google Maps</a>
+        <a class="google-maps-link" href="https://www.google.com/maps/place/435+S+Cedros+Ave,+Solana+Beach,+CA+92075">View in Google Maps</a>
       </@section>
-      <@media />
       <@contact />
     </ul>
   </#compress>
@@ -30,7 +37,7 @@
 <#macro section title icon>
   <#compress>
     <li class="column">
-      <strong class="column-title ${icon}">${title}</strong>
+      <strong class="column-title">${title}</strong>
       <div class="column-content">
         <#nested />
       </div>
@@ -38,32 +45,21 @@
   </#compress>
 </#macro>
 
-<#macro media>
-  <#compress>
-    <@section title="Media" icon="icon-images">
-      <ul>
-        <li><a href="img/front.jpg">Digital Rendering - Front</a></li>
-        <li><a href="img/rear.jpg">Digital Rendering - Rear</a></li>
-        <li><a href="pdf/floor-plans.pdf">Floor Plans</a></li>
-      </ul>
-    </@section>
-  </#compress>
-</#macro>
-
 <#macro contact>
-  <@section title="Leasing Agents Contact" icon="icon-contact">
+  <@section title="Leasing Agents" icon="icon-contact">
     <ul class="leasing-agents">
       <li>
-        <strong>Dave Hagglund</strong><br>
-        <a href="tel:858-546-4614">(858)546-4614</a><br>
-        <a href="mailto:dave.hagglund@cbre.com">dave.hagglund@cbre.com</a>
+        <strong class="icon-contact">Dave Hagglund</strong>
+        <ul class="contact-list">
+          <li><a href="tel:858-546-4614">(858)546-4614</a></li>
+          <li><a href="mailto:dave.hagglund@cbre.com">dave.hagglund@cbre.com</a></li>
+        </ul>
       </li>
       <li>
-        <strong>Robert C. Gunness</strong><br>
-        <a href="tel:858-546-4614">(858)546-4614</a><br>
-        <a href="mailto:rob.gunness@cbre.com">rob.gunness@cbre.com</a>
-
-        <ul>
+        <strong class="icon-contact">Robert C. Gunness</strong>
+        <ul class="contact-list">
+          <li><a href="tel:858-546-4614">(858)546-4614</a></li>
+          <li><a href="mailto:rob.gunness@cbre.com">rob.gunness@cbre.com</a></li>
           <li>North San Diego: <a href="tel:760-438-8524">(760)438-8524</a></li>
           <li>Southwest Riverside Region: <a href="tel:951-326-2900">(951)326-2900</a></li>
         </ul>
