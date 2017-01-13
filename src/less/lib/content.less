@@ -17,7 +17,22 @@
 }
 
 .page-main {
-  flex: 1 1 0px;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: @gutter-width/2;
+
+  @media (min-width: @screen-sm-min) {
+    padding-top: @gutter-width;
+  }
+}
+
+.white-space {
+  flex: 1 1 20%;
+  @media (min-width: @screen-sm-min) {
+
+  }
 }
 
 .page-title {
@@ -25,39 +40,83 @@
   font-size: 36px;
   margin: 0;
 
+  @media (min-width: @screen-md-min) {
+    font-size: 45px;
+  }
+
+  @media (min-width: @screen-lg-min) {
+    font-size: 60px;
+  }
+
   .sub-title {
     font-size: 15px;
   }
 }
 
-.three {
-  margin: 0;
+.columns {
+  margin: @gutter-width 0 0;
   padding: 0;
   list-style-type: none;
   display: flex;
-  justify-content: space-between;;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media (min-width: @screen-md-min) {
+    flex-direction: row;
+    margin-top: @gutter-width * 2;
+  }
 
   .column {
     flex: 1 1 0px;
-    margin-right: 30px;
     background-color: rgba(0, 0, 0, 0.5);
+    margin-bottom: @gutter-width/2;
+
+    @media (min-width: @screen-md-min) {
+      margin-bottom: 0;
+      margin-right: @gutter-width;
+    }
 
     &:last-child {
       margin-right: 0;
+      margin-bottom: 0;
     }
   }
 
   .column-title {
-    display: block;
+    display: flex;
+    align-items: center;
     background-color: rgba(0, 0, 0, 0.1);
-    padding: 15px;
+    padding: 9px 12px;
+
+    @media (min-width: @screen-md-min) {
+      padding: 15px;
+    }
   }
 
   .column-content {
-    padding: 15px;
+    padding: 9px 12px;
+
+    @media (min-width: @screen-md-min) {
+      padding: 15px;
+    }
   }
 }
 
 .address {
   font-style: normal;
+}
+
+.google-maps-link {
+  font-size: 12px;
+  display: block;
+  margin-top: 5px;
+}
+
+.copyright-assets {
+  font-size: 14px;
+}
+
+.footer {
+  padding-top: @gutter-width;
+  padding-bottom: @gutter-width;
 }

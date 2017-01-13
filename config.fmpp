@@ -12,8 +12,8 @@ borders: [
   header("<#import '/templates/common.ftl' as c />", sitemap.xml)
 ]
 modes: [
-  ignore(/templates/, /less/, *.js)
-  copy(/pdf/, /img/, *.jpg)
+  ignore(/templates/, /less/, *.js, /img/.DS_Store)
+  copy(/pdf/, /img/, /icon-font/, robots.txt)
 ]
 data: {
   domain: cedroscollective.com

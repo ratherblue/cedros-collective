@@ -49,7 +49,7 @@
     <html lang="${c.lang}">
     <head prefix="og: http://ogp.me/ns#">
       <@charset />
-      <title>${title?xhtml + titleSuffix}</title>
+      <title>Cedros Collective</title>
       <@defaultMetaTags />
       <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
       <link rel="stylesheet" type="text/css" href="styles.css">
@@ -65,7 +65,7 @@
         </#if>
         </#compress><#nested /><#compress>
       </main>
-
+      <div class="white-space"></div>
       <#-- footer -->
       <@footer.wrapper>
         <@footer.copyright />

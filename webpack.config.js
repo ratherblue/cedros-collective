@@ -16,7 +16,8 @@ const config = {
     loaders: [
       {
         test: /\.less$/,
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader!less-loader')
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader?url=false!postcss-loader!less-loader'),
+        options: { url: false }
       },
     ]
   },
