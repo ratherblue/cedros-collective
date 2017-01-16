@@ -61,7 +61,6 @@
       <main class="page-width page-main" role="main">
         </#compress><#nested /><#compress>
       </main>
-      <div class="white-space"></div>
       <#-- footer -->
       <@footer.wrapper>
         <@footer.copyright />

@@ -42,9 +42,27 @@
   }
 }
 
+.address {
+  font-style: normal;
+  margin-top: 6px;
+  font-size: 12px;
+
+  @media (min-width: @screen-md-min) {
+    font-size: 15px;
+  }
+}
+
 .sub-title {
   font-size: 15px;
   font-style: italic;
+  white-space: nowrap;
+  display: block;
+  margin-top: 6px;
+
+  @media (min-width: @screen-sm-min) {
+    display: inline-block;
+    margin-top: 0;
+  }
 
   @media (min-width: @screen-lg-min) {
     font-size: 24px;
@@ -52,8 +70,8 @@
 }
 
 .page-title,
+.address,
 .sub-title {
-  display: inline-block;
   color: #ffdbb9;
   line-height: 1;
   text-shadow: 1px 1px #444;
