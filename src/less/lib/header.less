@@ -4,22 +4,23 @@
   justify-content: flex-start;
   background: url(../img/bg.jpg) no-repeat 100% 100%;
   background-size: cover;
-  height: 200px;
+  height: 170px;
   box-sizing: border-box;
   padding-top: @gutter-width;
 
   @media (min-width: @screen-md-min) {
+    height: 200px;
+  }
+  @media (min-width: @screen-md-min) {
     padding-top: @gutter-width*2;
     height: 300px;
   }
-
   @media (min-width: @screen-lg-min) {
     height: 400px;
   }
-}
-
-.header {
-  padding-bottom: @gutter-width;
+  @media (min-width: @screen-xxl-min) {
+    height: 600px;
+  }
 }
 
 .page-title {
@@ -30,19 +31,24 @@
   @media (min-width: @screen-sm-min) {
     font-size: 45px;
   }
-
   @media (min-width: @screen-md-min) {
     font-size: 60px;
   }
-
   @media (min-width: @screen-lg-min) {
     font-size: 72px;
+  }
+  @media (min-width: @screen-xl-min) {
+    font-size: 90px
   }
 }
 
 .sub-title {
   font-size: 15px;
   font-style: italic;
+
+  @media (min-width: @screen-lg-min) {
+    font-size: 24px;
+  }
 }
 
 .page-title,
