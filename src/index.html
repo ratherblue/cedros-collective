@@ -2,27 +2,32 @@
 
 <@page.page bodyClass="homepage" title="Welcome" sitemap={ "priority": "0.8", "changefreq": "yearly" }>
   <#compress>
+    <ul class="images">
+      <@thumb title="Front" url="img/front.jpg" thumbnailClass="front" />
+      <@thumb title="Rear" url="img/rear.jpg" thumbnailClass="rear" />
+      <@thumb title="Floor Plan" url="pdf/floor-plants.pdf" thumbnailClass="floor-plan" />
+      <@thumb title="Parking" url="img/front.jpg" thumbnailClass="parking" />
+    </ul>
     <@sections />
   </#compress>
 </@page.page>
 
+<#macro thumb title url thumbnailClass>
+  <li>
+    <a href="${url}">
+      <span class="thumbnail ${thumbnailClass}"></span>
+      <span class="thumbnail-title">${title}</span>
+    </a>
+  </li>
+</#macro>
 
 <#macro sections>
   <#compress>
     <ul class="columns">
-      <@section title="About Cedros Collective" icon="icon-info">
-        <strong class="icon-images">Images</strong>
-        <ul class="image-list">
-          <li><a class="icon-image" href="img/front.jpg">Digital Rendering — Front</a></li>
-          <li><a class="icon-image" href="img/rear.jpg">Digital Rendering — Rear</a></li>
-          <li><a class="icon-pdf" href="pdf/floor-plans.pdf">Floor Plans</a></li>
-        </ul>
-
-        <!-- <strong class="icon-address">Address</strong> -->
-
-        <!-- <a class="google-maps-link" href="https://www.google.com/maps/place/435+S+Cedros+Ave,+Solana+Beach,+CA+92075">View in Google Maps</a> -->
-      </@section>
       <@contact />
+      <@section title="Leasing Flyer" icon="icon-pdf">
+        Leasing flyer.
+      </@section>
     </ul>
   </#compress>
 </#macro>
