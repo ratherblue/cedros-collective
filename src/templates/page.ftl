@@ -13,6 +13,7 @@
 -->
 <#import "seo.ftl" as seo />
 <#import "social-media.ftl" as socialMedia />
+<#import "header.ftl" as header />
 <#import "footer.ftl" as footer />
 
 
@@ -56,13 +57,8 @@
     </head>
     <body<#if bodyClass?has_content> class="${bodyClass}"</#if> itemscope itemtype="${itemtype}">
       <meta itemprop="dateModified" content="${pp.now?iso("America/Los_Angeles")}">
+      <@header.header />
       <main class="page-width page-main" role="main">
-        <#if (activeTab != "home" && title != "Welcome")>
-          <@ui.breadcrumb crumbs=[{
-            "title": title,
-            "url": pp.pathTo(pp.outputFile)
-          }] />
-        </#if>
         </#compress><#nested /><#compress>
       </main>
       <div class="white-space"></div>

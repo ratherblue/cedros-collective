@@ -33,5 +33,5 @@
   @param attrs
 -->
 <#macro pageTitle class="" attrs="">
-  <h1 class="${('page-title ' + class)?trim}"<#if attrs?has_content> ${attrs}</#if>><#nested /></h1>
+  <h1 class="${('page-title ' + class)?trim}"<#if attrs?has_content> ${attrs}</#if>>Cedros Collective</h1><#t />
 </#macro>
