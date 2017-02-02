@@ -13,6 +13,10 @@
 
 <#macro thumb title url thumbnailClass>
   <li>
+    <#if thumbnailClass == "floor-plan">
+      <p>x,xxx square feet of totally renovated cafe and retail shops and x,xxx square feet of creative office on Solana Beach’s best street.</p>
+      <p>AVAILABLE: September 2017</p>
+    </#if>
     <a href="${url}">
       <span class="thumbnail ${thumbnailClass}"></span>
       <span class="thumbnail-title">${title}</span>
