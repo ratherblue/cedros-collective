@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const LessPluginCleanCSS = require('less-plugin-clean-css');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+
 const config = {
   entry: {
     app: './src/app.js'
