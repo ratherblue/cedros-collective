@@ -64,6 +64,8 @@
       <#-- footer -->
       <@footer.wrapper>
         <@footer.copyright />
+
+        <@footer.leasingAgents />
       </@footer.wrapper>
 
       <#-- analytics -->

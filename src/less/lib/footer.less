@@ -11,7 +11,7 @@
 
 .footer-wrapper {
   margin-top: @gutter-width/2;
-  background-color: rgba(30, 30, 30, .8);
+  background-color: #045c58;
 
   @media (min-width: @screen-sm-min) {
     margin-top: @gutter-width;
@@ -21,10 +21,67 @@
 .footer {
   padding-top: @gutter-width/2;
   padding-bottom: @gutter-width/2;
-  text-shadow: 1px 1px rgba(4, 3, 3, 1);
-  color: #b79d84;
+  color: #fff;
 
   a {
-    color: #93e22d;
+    color: #fff;
+  }
+}
+
+.copyright {
+  font-size: 12px;
+  line-height: 1.3;
+  margin-bottom: @gutter-width/3;
+  margin-top: 0;
+}
+
+.leasing-agents {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  font-size: 14px;
+
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: @gutter-width/2;
+    margin-bottom: @gutter-width/2;
+
+    @media (min-width: @screen-xs-min) {
+      justify-content: flex-start;
+    }
+  }
+
+  .name {
+    font-weight: 500;
+  }
+
+  .pipe {
+    content: '|';
+    margin: 0 10px;
+    display: block;
+    color: #fff;
+    background: #fff;
+    flex: 0 0 1px;
+    width: 1px;
+    height: 15px;
+    opacity: 0.5;
+  }
+
+  .phone-full,
+  .email-full {
+    display: none;
+
+    @media (min-width: @screen-xs-min) {
+      display: block;
+    }
+  }
+
+  .phone-short,
+  .email-short {
+    @media (min-width: @screen-xs-min) {
+      display: none;
+    }
   }
 }
