@@ -49,3 +49,14 @@
     Lic. ${license}<#t />
   </#compress>
 </#macro>
+
+<#macro cbre>
+    <div class="cbre">
+        <p>
+            CBRE, INC.<br>
+            Broker Lic. 00409987
+        </p>
+
+        <i class="icon-cbre" aria-hidden="true"></i>
+    </div>
+</#macro>

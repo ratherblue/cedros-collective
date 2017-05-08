@@ -65,7 +65,10 @@
       <@footer.wrapper>
         <@footer.copyright />
 
-        <@footer.leasingAgents />
+        <div class="leasing-agents-row">
+            <@footer.leasingAgents />
+            <@footer.cbre />
+        </div>
       </@footer.wrapper>
 
       <#-- analytics -->
