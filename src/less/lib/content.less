@@ -44,13 +44,12 @@
   padding: @gutter-width/2;
   font-weight: 600;
   text-align: center;
-  font-size: 12px;
+  font-size: 14px;
   margin-top: 0;
   margin-bottom: @gutter-width;
 
   @media (min-width: @screen-xs-min) {
-    font-size: 14px;
-    border-width: 7px;
+    border-width: 5px;
   }
 
   @media (min-width: @screen-md-min) {
@@ -64,11 +63,7 @@
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  font-size: 12px;
-
-  @media (min-width: @screen-sm-min) {
-    font-size: 14px;
-  }
+  font-size: 14px;
 
   @media (min-width: @screen-lg-min) {
     font-size: 16px;
@@ -109,6 +104,44 @@
         width: 40px;
         font-size: 40px;
         flex-basis: 40px;
+      }
+    }
+  }
+}
+
+
+.block2 {
+  padding: @gutter-width/2 0;
+  background-color: #fff;
+  color: #231f20;
+
+  .legend {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+    font-size: 24px;
+
+    li {
+      display: flex;
+      align-items: center;
+
+      &:first-child {
+        margin-bottom: @gutter-width/2;
+      }
+    }
+
+    .block {
+      width: 50px;
+      height: 50px;
+      margin-right: @gutter-width/2;
+
+      &.street-level {
+        background-color: #f8ac00;
+      }
+
+      &.parking-level {
+        background-color: #9281bb;
       }
     }
   }

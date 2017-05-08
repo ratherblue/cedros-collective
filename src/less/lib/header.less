@@ -1,44 +1,191 @@
+@menu-height: 40px;
+
 .header-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background: url(../img/header-bg.jpg) no-repeat 100% 100%;
+  background: linear-gradient(rgba(255,255,255,0.15), rgba(255,255,255,0.15)),
+              url(../img/header-bg.jpg) no-repeat 100% 100%;
   background-size: cover;
-  height: 170px;
-  box-sizing: border-box;
-  padding-top: @gutter-width;
-  color: #ffdbb9;
-
-  @media (min-width: @screen-md-min) {
-    height: 200px;
-  }
-  @media (min-width: @screen-md-min) {
-    padding-top: @gutter-width*2;
-    height: 300px;
-  }
-  @media (min-width: @screen-lg-min) {
-    height: 400px;
-  }
-  @media (min-width: @screen-xxl-min) {
-    height: 600px;
-  }
-}
-
-.page-title {
-  font-weight: 400;
-  font-size: 36px;
-  margin: 0;
 
   @media (min-width: @screen-sm-min) {
-    font-size: 45px;
+    padding-top: @gutter-width;
   }
+
   @media (min-width: @screen-md-min) {
-    font-size: 60px;
-  }
-  @media (min-width: @screen-lg-min) {
-    font-size: 72px;
-  }
-  @media (min-width: @screen-xl-min) {
-    font-size: 90px
+    padding-top: @gutter-width*2;
   }
 }
+
+.header {
+  text-align: center;
+
+  .icon-logo {
+    display: block;
+    font-size: 100px;
+    padding-top: @menu-height + @gutter-width;
+
+    @media (min-width: @screen-sm-min) {
+      padding-top: 0; // when mobile menu hides
+    }
+
+    @media (min-width: @screen-xs-min) {
+      font-size: 150px;
+    }
+
+    @media (min-width: @screen-sm-min) {
+      font-size: 200px;
+    }
+
+    @media (min-width: @screen-md-min) {
+      font-size: 250px;
+    }
+
+    @media (min-width: @screen-lg-min) {
+      font-size: 300px;
+    }
+  }
+
+  .header-row {
+    text-align: center;
+    //display: flex;
+    //justify-content: space-between;
+    //align-items: flex-end;
+    padding: @gutter-width/2 0;
+
+    @media (min-width: @screen-sm-min) {
+      padding-top: @gutter-width;
+      padding-bottom: @gutter-width;
+    }
+
+    .address {
+      font-weight: 600;
+      font-size: 24px;
+      text-shadow: 2px 1px #333;
+    }
+    //
+    //.icon-cbre {
+    //  font-size: 10px;
+    //
+    //  @media (min-width: @screen-sm-min) {
+    //    font-size: 16px;
+    //  }
+    //}
+  }
+}
+
+.mobile-header {
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: @screen-sm-min) {
+    display: none;
+  }
+
+  .mobile-logo {
+    height: @menu-height;
+    line-height: @menu-height;
+  }
+
+  .toggle {
+    background: transparent;
+    padding: 0 @gutter-width/2;
+    margin: 0;
+    color: #fff;
+    font-family: inherit;
+    cursor: pointer;
+    position: relative;
+    border: 1px solid #032f2c;
+
+    .mobile-menu-open & {
+      border-color: #fff;
+    }
+
+    &:focus {
+      outline: 0;
+    }
+
+    &::after {
+      // small sliver to make menu and button seamless
+      .mobile-menu-open & {
+        content: '';
+        width: 100%;
+        height: 2px;
+        background: #032f2c;
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: -2px;
+        z-index: 2;
+      }
+    }
+
+    i {
+      font-size: 24px;
+    }
+  }
+}
+
+.nav-wrapper {
+  background-color: #032f2c;
+  position: fixed;
+  width: 100%;
+  height: @menu-height;
+
+  @media (min-width: @screen-sm-min) {
+    position: static;
+  }
+}
+.navigation {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 14px;
+
+  // mobile menu styles
+  @media (max-width: @screen-xs-max) {
+    position: absolute;
+    right: @gutter-width/2;
+    background-color: #032f2c;
+    display: none;
+    padding: @gutter-width/6;
+    border: 1px solid #fff;
+
+    .mobile-menu-open & {
+      display: block;
+    }
+  }
+
+  @media (min-width: @screen-sm-min) {
+    display: flex;
+    justify-content: flex-start;
+    height: @menu-height;
+    line-height: @menu-height;
+  }
+
+  li {
+    display: block;
+  }
+
+  a {
+    color: #fff;
+    font-weight: 400;
+    padding: @gutter-width/4 @gutter-width/2;
+    white-space: nowrap;
+    display: block;
+
+    @media (min-width: @screen-sm-min) {
+      padding: 0 @gutter-width/2;
+    }
+
+    @media (min-width: @screen-lg-min) {
+      font-size: 16px;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
