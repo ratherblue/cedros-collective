@@ -54,6 +54,7 @@
       <@defaultMetaTags />
       <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
       <link rel="stylesheet" type="text/css" href="styles.css">
+      <link rel="shortcut icon" href="img/c-logo.png" type="image/x-icon">
     </head>
     <body<#if bodyClass?has_content> class="${bodyClass}"</#if> itemscope itemtype="${itemtype}">
       <meta itemprop="dateModified" content="${pp.now?iso("America/Los_Angeles")}">
@@ -77,42 +78,6 @@
     </html>
   </#compress>
 </#macro>
-
-
-<#---
-  @param activeTab
--->
-<#macro pageNav activeTab>
-  <#local links = [
-    {
-      "key": "home",
-      "url": "/",
-      "title": "Home"
-    }, {
-      "key": "portfolio",
-      "url": "/portfolio/",
-      "title": "Portfolio"
-    }, {
-      "key": "resume",
-      "url": "/resume/",
-      "title": "Résumé"
-    }, {
-      "key": "about",
-      "url": "/about/",
-      "title": "About"
-    }
-  ] />
-  <nav class="main-nav" role="navigation"><#t>
-    <ul><#t>
-      <#list links as link>
-        <li itemscope itemtype="http://schema.org/SiteNavigationElement"><#t>
-          <a itemprop="url" href="${pp.pathTo(link.url)}"<#if activeTab == link.key> class="active"</#if>><span itemprop="name">${link.title}</span></a><#t>
-        </li><#t>
-      </#list>
-    </ul><#t>
-  </nav><#t>
-</#macro>
-
 
 <#---
   Adds to the list of pages for use in the sitemap and various navigations

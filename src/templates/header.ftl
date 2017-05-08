@@ -28,12 +28,12 @@
                   </button>
               </div>
               <ul class="navigation">
-                <li><a href="#">Overview</a></li>
-                <li><a href="#">Retail</a></li>
-                <li><a href="#">Office</a></li>
-                <li><a href=#">Cedros Avenue Design District</a></li>
-                <li><a href="#">Map</a></li>
-                <li><a href="#">Leasing Flyer</a></li>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#retail">Retail</a></li>
+                <li><a href="#office">Office</a></li>
+                <li><a href="#design-district">Cedros Avenue Design District</a></li>
+                <li><a href="#map">Map</a></li>
+                <li><a href="leasing-flyer.pdf">Leasing Flyer <i class="icon-picture_as_pdf"></i></a></li>
               </ul>
           </div>
       </nav>
