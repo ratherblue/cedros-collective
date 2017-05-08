@@ -52,13 +52,13 @@
       <@charset />
       <title>Cedros Collective</title>
       <@defaultMetaTags />
-      <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
       <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
     <body<#if bodyClass?has_content> class="${bodyClass}"</#if> itemscope itemtype="${itemtype}">
       <meta itemprop="dateModified" content="${pp.now?iso("America/Los_Angeles")}">
       <@header.header />
-      <main class="page-width page-main" role="main">
+      <main class="page-main" role="main">
         </#compress><#nested /><#compress>
       </main>
       <#-- footer -->

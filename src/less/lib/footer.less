@@ -12,6 +12,7 @@
 .footer-wrapper {
   margin-top: @gutter-width/2;
   background-color: #045c58;
+  flex: 1 1 auto;
 
   @media (min-width: @screen-sm-min) {
     margin-top: @gutter-width;
@@ -55,11 +56,11 @@
       justify-content: space-between;
     }
 
-
     p {
-      margin-right: 24px;
+      margin-right: @gutter-width;
       font-size: 12px;
       text-align: center;
+      margin-bottom: 0;
     }
 
     i {
@@ -83,8 +84,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: @gutter-width/2;
-    margin-bottom: @gutter-width/2;
+    padding-top: @gutter-width/2;
     white-space: nowrap;
 
     @media (min-width: @screen-sm-min) {
@@ -97,12 +97,12 @@
   }
 
   .name {
-    font-weight: 500;
+    font-weight: 600;
   }
 
   .pipe {
     content: '|';
-    margin: 0 10px;
+    margin: 0 @gutter-width/3;
     display: block;
     color: #fff;
     background: #fff;
@@ -110,6 +110,10 @@
     width: 1px;
     height: 15px;
     opacity: 0.5;
+  }
+
+  .email-full:hover {
+    text-decoration: underline;
   }
 
   .phone-full,
