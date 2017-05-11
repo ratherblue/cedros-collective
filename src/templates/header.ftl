@@ -7,30 +7,37 @@
   <#compress>
     <div class="header-wrapper"><#t />
       <header class="page-width header" role="banner"><#t />
-        <i class="icon-logo" aria-label="Cedros Collective"></i>
-
-        <div class="header-row">
-            <div class="address">
-                <div class="address-wrapper">
-                    <div class="numbers">
-                        435<br>
-                        439
-                    </div>
-                    <div class="plus">+</div>
-                    <div class="street">
-                        South<br>
-                        Cedros<br>
-                        Avenue
-                    </div>
-                </div>
-                <div class="city">
-                    Solana Beach, CA
-                </div>
-
-            </div>
-            <#-- <i class="icon-cbre"></i> -->
+        <div class="header-col">
+            A 10,014 SF Urban Creative Redevelopment Center with Mixed Use Retail/Café/Creative Office Center
         </div>
+        <div class="logo-wrapper">
+            <i class="icon-logo" aria-label="Cedros Collective"></i>
 
+            <div class="header-row">
+                <div class="address">
+                    <div class="address-wrapper">
+                        <div class="numbers">
+                            435<br>
+                            439
+                        </div>
+                        <div class="plus">+</div>
+                        <div class="street">
+                            South<br>
+                            Cedros<br>
+                            Avenue
+                        </div>
+                    </div>
+                    <div class="city">
+                        Solana Beach, CA
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="header-col-right">
+            Under Construction <br>
+            Completion October 2017
+        </div>
       </header><#t />
       <nav id="navWrapper" class="nav-wrapper">
           <#-- keep page width its own element so the mobile menu css is less complicated -->
