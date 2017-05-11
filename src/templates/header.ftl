@@ -11,7 +11,22 @@
 
         <div class="header-row">
             <div class="address">
-                435 and 439 South Cedros Avenue, Solana Beach, CA
+                <div class="address-wrapper">
+                    <div class="numbers">
+                        435<br>
+                        439
+                    </div>
+                    <div class="plus">+</div>
+                    <div class="street">
+                        South<br>
+                        Cedros<br>
+                        Avenue
+                    </div>
+                </div>
+                <div class="city">
+                    Solana Beach, CA
+                </div>
+
             </div>
             <#-- <i class="icon-cbre"></i> -->
         </div>

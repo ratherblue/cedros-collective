@@ -19,21 +19,21 @@
 
 .header {
   text-align: center;
+  display: flex;
+  justify-content: center;
 
   .icon-logo {
     display: block;
     font-size: 100px;
     padding-top: @menu-height + @gutter-width;
 
-    @media (min-width: @screen-sm-min) {
-      padding-top: 0; // when mobile menu hides
-    }
 
     @media (min-width: @screen-xs-min) {
       font-size: 150px;
     }
 
     @media (min-width: @screen-sm-min) {
+      padding-top: 0; // when mobile menu hides
       font-size: 200px;
     }
 
@@ -58,10 +58,35 @@
       padding-bottom: @gutter-width;
     }
 
+
+
     .address {
-      font-weight: 600;
-      font-size: 24px;
-      text-shadow: 2px 1px #333;
+      font-weight: 400;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-left: -40px;
+      margin-top: 114px;
+
+      @media (min-width: @screen-xs-min) {
+        margin-left: -56px;
+        margin-top: 149px;
+      }
+
+      @media (min-width: @screen-sm-min) {
+        margin-left: -76px;
+        margin-top: 102px;
+      }
+
+      @media (min-width: @screen-md-min) {
+        margin-left: -96px;
+        margin-top: 131px;
+      }
+
+      @media (min-width: @screen-lg-min) {
+        margin-left: -100px;
+        margin-top: 165px;
+      }
     }
     //
     //.icon-cbre {
@@ -71,6 +96,65 @@
     //    font-size: 16px;
     //  }
     //}
+  }
+
+  .address-wrapper {
+    display: flex;
+    align-items: center;
+
+    .numbers {
+      font-size: 20px;
+      font-weight: 800;
+      line-height: 1.1;
+
+      @media (min-width: @screen-sm-min) {
+        font-size: 30px;
+      }
+
+      @media (min-width: @screen-md-min) {
+        font-size: 40px;
+      }
+    }
+
+    .plus {
+      font-size: 30px;
+      line-height: 1;
+      margin: 0 10px;
+      font-weight: 400;
+
+      @media (min-width: @screen-sm-min) {
+        font-size: 40px;
+      }
+    }
+
+    .street {
+      line-height: 1;
+      font-weight: 400;
+      font-size: 16px;
+      text-align: left;
+
+      @media (min-width: @screen-sm-min) {
+        font-size: 24px;
+      }
+
+      @media (min-width: @screen-md-min) {
+        font-size: 34px;
+      }
+    }
+  }
+
+  .city {
+    font-weight: 400;
+    font-size: 15px;
+    margin-top: 5px;
+
+    @media (min-width: @screen-sm-min) {
+      font-size: 19px;
+    }
+
+    @media (min-width: @screen-md-min) {
+      font-size: 25px;
+    }
   }
 }
 
